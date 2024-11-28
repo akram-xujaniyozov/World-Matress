@@ -1,0 +1,18 @@
+// button component
+.btn {
+  color: $white-color;
+  background-color: $primary-color;
+  padding: 1.1rem 4rem;
+  border: .3rem solid $primary-color;
+  border-radius: .7rem;
+  text-transform: uppercase;
+  transition: box-shadow .3s;
+
+  &:focus, &:focus-visible {
+    outline: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2rem 0 $primary-color;
+  }
+}

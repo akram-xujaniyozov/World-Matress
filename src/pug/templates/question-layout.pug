@@ -1,0 +1,18 @@
+block card
+  .question-popup__card
+    block card-left
+      .question-popup__card--left 
+        .question-popup__gift 
+          .question-popup__about 
+            block question-order
+              p.question-popup__text.heading-fiveth До получения подарка осталось ответить на 
+              h2.question-popup__title 5 ВОПРОСов
+          .question-popup__shade
+          .question-popup__gift-img 
+            img(src="./assets/images/gift.png", alt="gift")
+    block card-right
+      .question-popup__card--right
+        .close &times;
+        .line 
+        .question-popup__progress
+        block question-content

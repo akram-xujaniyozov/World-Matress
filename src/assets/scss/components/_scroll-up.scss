@@ -1,0 +1,52 @@
+.scroll-up {
+  position: fixed;
+  right: 2%;
+  bottom: -10%;
+ 
+  border-radius: 50%;
+  border: .3rem solid $white-color;
+  overflow: hidden;
+  transition: border .5s, bottom .2s;
+
+  &:hover {
+    cursor: pointer;
+    border: .3rem solid $primary-color;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 1.8rem 2rem;
+    background-image: linear-gradient(to right bottom, rgba($primary-color, 0.6), rgba($primary-color, 0.7), rgba($primary-color, 0.8));
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right bottom, $white-color, $white-color);
+      z-index: -1;
+      transition: opacity 0.5s;
+      opacity: 0;
+    } 
+    
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  
+  &:hover &__icon {
+    fill: $primary-color;
+    transform: scale(1.2);
+  }
+
+  &__icon {
+    fill: $white-color;
+    width: 4rem;
+    height: 4rem;
+    transform: scale(1);
+    transition: fill .5s, transform .5s;
+  }
+}

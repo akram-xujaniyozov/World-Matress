@@ -1,0 +1,28 @@
+// functions & mixins & variables
+@import './abstract/functions';
+@import './abstract/mixins';
+@import './abstract/variables';
+
+// reset & typography & colors & utilities
+@import './base/reset';
+@import './base/typography';
+@import './base/colors';
+@import './base/utilities';
+
+// button & number, question popup, & logo, call, scroll-up
+@import './components/button';
+@import './components/number-popup';
+@import './components/question-popup';
+@import './components/response-popup';
+@import './components/logo';
+@import './components/call';
+@import './components/scroll-up';
+
+// footer & header & layout
+@import './templates/layout';
+@import './templates/footer';
+@import './templates/header';
+
+// home 
+@import './pages/home';
+

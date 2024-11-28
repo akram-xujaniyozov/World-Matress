@@ -1,0 +1,34 @@
+extends ../templates/question-layout
+block question-order 
+  p.question-popup__text.heading-fiveth До получения подарка осталось
+  h2.question-popup__title 4 ВОПРОСa
+block question-content 
+  .question-popup__main 
+    h2.question-popup__order 02/06
+    h3.question-popup__main-title.heading-tertiary--600 Укажите размер спального места.
+    .question-popup__content 
+      .question-popup__products 
+        .question-popup__product 
+          .question-popup__product-img 
+            img(src="./assets/images/question-2/img-1.jpg", alt="img-1")
+          h2.question-popup__product-name.heading-tertiary 140 см х 200 см
+        .question-popup__product 
+          .question-popup__product-img 
+            img(src="./assets/images/question-2/img-2.jpg", alt="img-2")
+          h2.question-popup__product-name.heading-tertiary 160 см х 200 см
+        .question-popup__product 
+          .question-popup__product-img 
+            img(src="./assets/images/question-2/img-3.jpg", alt="img-3")
+          h2.question-popup__product-name.heading-tertiary 180 см х 200 см
+        .question-popup__product 
+          .question-popup__product-img 
+            img(src="./assets/images/question-2/img-4.jpg", alt="img-4")
+          h2.question-popup__product-name.heading-tertiary 200 см х 200 см
+        .question-popup__form-variant.u-ml-20 
+          label(for="size").heading-tertiary Свой вариант:
+          input(type="text", id="size")
+    .question-popup__btns 
+      button.question-popup__btn.heading-tertiary.question-popup__btn--back назад
+      button.question-popup__btn.heading-tertiary.question-popup__btn--next 
+        span 
+        | далее

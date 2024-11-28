@@ -1,0 +1,57 @@
+mixin catalog(cat, i)
+  .catalog.u-pb-41(class=`catalog--${i + 1}`)
+    .catalog__img(class=`catalog__img--${i + 1}`)
+      img(src=`./assets/images/${cat.img}.png`, alt=`${cat.img}`)
+    .catalog__about 
+      h6.catalog__name.heading-sixth= cat.name 
+      h5.catalog__price.heading-fiveth.u-mt-9= `Цена от ${cat.price}`
+      button.btn.para-small.u-mt-27= cat.button
+
+-
+  const catalogs = [
+    {
+      name: 'диван',
+      price: '38.000',
+      img: 'catalog-img-1',
+      button: 'перейти в каталог'
+    },
+    {
+      name: 'Модульная кровать',
+      price: '40.000',
+      img: 'catalog-img-2',
+      button: 'перейти в каталог'
+    },
+    {
+      name: '3D стежка',
+      price: '25.000',
+      img: 'catalog-img-3',
+      button: 'перейти в каталог'
+    },
+    {
+      name: 'Матрац с пружинным блоком Боннель',
+      price: '17.000',
+      img: 'catalog-img-4',
+      button: 'перейти в каталог'
+    },
+    {
+      name: 'Матрац с блоком независимых пружин',
+      price: '18.000',
+      img: 'catalog-img-5',
+      button: 'перейти в каталог'
+    },
+    {
+      name: 'Фигурное изголовье',
+      price: '34.000',
+      img: 'catalog-img-6',
+      button: 'перейти в каталог'
+    }
+  ];
+
+.catalogs__wrapper 
+  each cat, i in catalogs 
+    if(i <= 2)
+      +catalog(cat, i)
+.catalogs__wrapper 
+  each cat, i in catalogs 
+    if(i > 2)
+      +catalog(cat, i)

@@ -1,0 +1,23 @@
+extends ../templates/question-layout
+block question-order 
+  h2.question-popup__title.u-mt-47-min поздравляем
+  p.question-popup__text.heading-fiveth.u-mt-47-min получите ваш подарок при заказе
+block question-content 
+  .question-popup__main 
+    h2.question-popup__order 06/06
+    h3.question-popup__main-title.heading-tertiary--600 выберите подарок
+    .question-popup__content 
+      .question-popup__products 
+        .question-popup__product 
+          .question-popup__product-img.question-popup__product-img--rm(data-img="1")
+            img(src="./assets/images/question-6/img-1.png", alt="img-pillow")
+          h2.question-popup__product-name.question-popup__product-name--1.heading-tertiary Подушка
+        .question-popup__product 
+          .question-popup__product-img.question-popup__product-img--rm.question-popup__product--large-img 
+            img(src="./assets/images/question-6/img-2.png", alt="img-girl")
+          h2.question-popup__product-name.heading-tertiary Спасибо, ничего не надо 
+    .question-popup__btns 
+      button.question-popup__btn.heading-tertiary.question-popup__btn--back назад
+      button.question-popup__btn.heading-tertiary.question-popup__btn--next 
+        span 
+        | далее

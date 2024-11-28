@@ -1,0 +1,87 @@
+// Import font
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+// typos
+// heading-primary
+.heading-primary {
+  @include font(3.7, 'Montserrat-SemiBold', 600, 1.3);
+  text-transform: uppercase;
+}
+
+ // .heading-secondary
+.heading-secondary {
+  @include font(3, 'Montserrat-Medium', 500, 1);
+  text-transform: uppercase;
+
+  // .heading-secondary--600
+  &--600 {
+    @include font(3, 'Montserrat-SemiBold', 600, 1.3);
+  }
+}
+
+// heading-tertiary
+.heading-tertiary {
+  @include font(2.5, 'Montserrat-Regular', 400, 1);
+
+  &--600 {
+    @include font(2.5, 'Montserrat-SemiBold', 600, 1);  
+  }
+}
+
+// heading-fourth
+.heading-fourth {
+  @include font(2.4, 'Montserrat-SemiBold', 600, normal);
+  text-transform: uppercase;
+}
+
+// heading-fiveth
+.heading-fiveth {
+  @include font(2.1, 'Montserrat-Regular', 400, normal);
+
+  &--600 {
+    @include font(2.1, 'Montserrat-Semibold', 600, normal);
+  }
+}
+
+// heading-sixth
+.heading-sixth {
+  @include font(2, 'Montserrat-Semibold', 600, normal);
+  text-transform: uppercase;
+
+  &--400 {
+    @include font(2, 'Montserrat-Regular', 400, 1.3);
+  }
+}
+
+// para-big
+.para-big {
+  @include font(1.7, 'Montserrat-Regular', 400, normal);
+}
+
+// para-medium
+.para-medium {
+  @include font(1.6, 'Montserrat-Semibold', 600, normal);
+}
+
+// para-small
+.para-small {
+  @include font(1.5, 'Montserrat-Regular', 400, 1.1);
+}
+
+// para-smallest
+.para-smallest {
+  @include font(1.2, 'Montserrat-Regular', 400, normal);
+}

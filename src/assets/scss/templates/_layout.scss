@@ -1,0 +1,9 @@
+// Main container
+.main-container {
+  @include container(192, 100%, 0, auto);
+  background-color: $white-color;
+}
+
+.container {
+  @include container(151, 100%, 0, auto);
+}

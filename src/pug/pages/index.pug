@@ -1,0 +1,19 @@
+extends ../templates/layout
+block main
+  main.main-home 
+    section.catalogs 
+      h2.catalogs__title.heading-secondary.heading-secondary--600.bg-light Каталог наших изделий
+      .container 
+        section.catalogs__block   
+          include ../includes/catalog
+    section.about 
+      .about__title-wrapper.bg-light
+        .container 
+          h2.about__title.heading-secondary--600 Почему более 98% клиентов возвращаются в “Мир матрацев” повторно и рекомендуют компанию друзьям?
+      .about__detail 
+        .container 
+          ul.about__detail-list
+            include ../includes/about-detail
+    #map
+   
+        

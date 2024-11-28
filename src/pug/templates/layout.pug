@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="./assets/images/globe.png", type="image/x-icon")
+    title World matress
+    link(rel="stylesheet", href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css")
+    link(rel="stylesheet", href="./assets/css/main.min.css")
+    script(defer, src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js")
+    script(defer, src="./assets/js/index.min.js") 
+  body 
+    .main-container
+      block header 
+        include ../includes/header
+      
+      block main 
+        main Main Content
+
+      block footer 
+        include ../includes/footer
+    
+    block number-popup 
+      include ../components/number-popup
+
+    block question-popup 
+      include ../components/question-popup
+    
+    block response-popup 
+      include ../components/response-popup
+    
+    block scroll-up 
+      include ../components/scroll-up

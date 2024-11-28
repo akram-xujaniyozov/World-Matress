@@ -1,0 +1,16 @@
+.call {
+  max-width: 20.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  transition: all .8s;
+
+  &__number {
+    margin-top: 1.4rem;
+  }
+
+  &__about {
+    margin-top: 1.1rem;
+  }
+}

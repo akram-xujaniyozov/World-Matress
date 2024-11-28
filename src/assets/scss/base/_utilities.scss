@@ -1,0 +1,105 @@
+@use "sass:math";
+
+// margin top
+@each $val in $marginTopSizes {
+  @if($val < 0) {
+    .u-mt#{$val}-min {
+      margin-top: math.div($val, 10) * 1rem;
+    }
+  }
+  
+  @if($val > 0) {
+    .u-mt-#{$val} {
+      margin-top: math.div($val, 10) * 1rem;
+    } 
+  }
+}
+
+
+.u-ml-20 {
+  margin-left: 2rem;
+}
+
+// padding bottom
+.u-pb-41 {
+  padding-bottom: 4.1rem;
+}
+
+// hidden
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Close
+.close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.6rem;
+  font-size: 5rem;
+  line-height: .5;
+  color: $gray-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// line
+.line {
+  height: 1px;
+  background-color: $gray-color;
+}
+
+.fade-up {
+  transform: translate(-50%, -200%) !important;
+}
+
+.fade-down {
+  bottom: 3% !important;
+}
+
+.to-right {
+  @include toToward(0, -8);
+}
+
+.to-left {
+  @include toToward(0, 8);
+}
+
+.to-top {
+  @include toToward(0, 10);
+}
+
+// Popup width is defined in JS using options
+.leaflet-popup {
+  position: relative;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: $white-color;
+  color: $primary-color;
+  border-radius: .5rem;
+  margin-top: -2rem;
+  border: .2rem solid $primary-color;
+  font-family: 'Montserrat-Medium';
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background: $primary-color;
+}
+
+.leaflet-popup .leaflet-popup-close-button span {
+  color: $primary-color;
+  font-size: 2rem;
+
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  z-index: 1;
+}

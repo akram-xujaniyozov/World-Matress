@@ -1,0 +1,27 @@
+extends ../templates/question-layout
+block card
+  .question-popup__card.question-popup__card--subcard 
+    block card-left
+      div
+    block card-right
+      .question-popup__card--right
+        .close &times;
+        .line 
+        .question-popup__progress
+        block question-content
+          .question-popup__info
+            h3.heading-tertiary--600 спасибо за ответы! 
+            h3.heading-tertiary--600 оставьте свой телефон. мы вышлем на него расчет стоимости вашего заказа
+            h3.heading-tertiary + каталог и закрепим за вами подарок
+          form.question-popup__form(action="")
+            .question-popup__form-info-group 
+              label(for="first").heading-tertiary Имя
+              input(type="text") 
+            .question-popup__form-info-group 
+              label(for="first").heading-tertiary номер телефона
+              input(type="tel") 
+          .question-popup__last-btns 
+            button.heading-tertiary.question-popup__last-btn.question-popup__btn--back назад
+            button.heading-tertiary.question-popup__last-btn.question-popup__last-btn--accept 
+              span 
+              | получить результаты расчета

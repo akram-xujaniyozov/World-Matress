@@ -1,0 +1,31 @@
+// color variables
+$primary-color: #0eccdd;
+$light-color: #fafafa;
+$white-color: #ffffff;
+$whiter-color: #fcfcfc;
+$black-color: #000000;
+$dark-color: #2d2d2d;
+$gray-color: #bdbdbd;
+$grayer-color: #a09f9f;
+
+// colors map
+$colors: (
+  "primary": $primary-color,
+  "light": $light-color,
+  "white": $white-color,
+  "black": $black-color,
+  "dark": $dark-color,
+  "gray": $gray-color,
+);
+
+// margin-top sizes
+$marginTopSizes: 9 18 21 27 31 42 -47;
+
+// header-option width
+$option-about-width: 17, 14.2, 18.8;
+
+// header-service-title width
+$service-title-width: 16.4, 18.5, 24, 22;
+
+// header-service-about width
+$service-about-width: 27.7, 26.7, 31.2, 27.1;

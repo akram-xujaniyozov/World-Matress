@@ -1,0 +1,151 @@
+// Header 
+%headers__transition {
+  transition: all .8s;
+}
+
+.header {
+  &__logo {
+    max-width: 38.5rem;
+    height: 7rem;
+    margin: .6rem auto;
+  }
+
+  &__main {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: minmax(min-content, 31.5rem) repeat(3, min-content);
+    grid-template-columns: 70.5rem 1fr;
+    justify-items: start;
+    align-items: center;
+  }
+
+  &__title {
+    align-self: end;
+    @extend %headers__transition;
+  }
+
+  &__voting {
+    @extend %headers__transition;
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    @extend %headers__transition;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--1 {
+      margin-right: 4.4rem;
+    }
+
+    &--2 {
+      margin-right: 7.2rem;
+    }
+
+    &-about {
+      @include maxWidth($option-about-width);
+    }
+  }
+
+  &__btn {
+    margin-bottom: 10.1rem;
+    @extend %headers__transition;
+  }
+
+  &__gallery {
+    display: flex;
+    align-items: center;
+    @extend %headers__transition;
+
+    align-self: start;
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
+
+    &-lamp {
+      @include gallery(19.4, 54.6, flex-start);
+      transform: rotateY(180deg);
+    }
+
+    &-bed {
+      @include gallery(63.1, 43.5, flex-end, -10, -2.5);
+    }
+
+    &-flower {
+      @include gallery(38, 38, flex-end, -15, -6);
+    }
+  }
+ 
+  // header__service
+  &__service {
+    margin-top: -2.6rem;
+    @extend %headers__transition;
+    
+    // header__service-wrapper
+    &-wrapper {
+      background-color: $white-color;
+      box-shadow: 0 0.8rem 4.1rem -0.9rem rgba(0, 0, 0, .25);
+      padding-top: 5.5rem;
+      padding-bottom: 2.3rem;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(37.75rem, 1fr));
+    }
+
+    &-type {
+      display: flex;
+      flex-direction: column;
+      padding-left: 3.5rem;
+
+      &:not(:first-of-type) {
+        border-left: 2px solid $black-color;
+      }
+
+      & > *:first-child {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-guarantee {
+      gap: 1.1rem;
+      &-icon {
+        @include service-icon(6.1, 6.2);
+      }
+    }
+
+    &-delivery {
+      gap: 1.1rem;
+      &-icon{
+        @include service-icon(8.6, 6.2);
+      }
+    }
+
+    &-price {
+      gap: .8rem;
+      &-icon {
+        @include service-icon(7.2, 6.8); 
+      }
+    }
+
+    &-consult {
+      gap: .6rem;
+      &-icon {
+        @include service-icon(6.4, 6.4);
+      }
+    }
+
+    &-title {
+      @include maxWidth($service-title-width);
+    }
+
+    &-about {
+      @include maxWidth($service-about-width);
+    }
+  }
+}

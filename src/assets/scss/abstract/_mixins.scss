@@ -1,0 +1,69 @@
+// mixin container
+@mixin container($maxWidth, $width, $my, $mx) {
+  max-width: $maxWidth * 1rem;
+  width: $width;
+  margin: $my $mx;
+}
+
+// mixin popup
+@mixin popup($top, $left, $width, $bgColor, $zIndex, $height: auto) {
+  position: fixed;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+  z-index: $zIndex;
+}
+
+// mixin font
+@mixin font($size, $family, $weight, $line) {
+  font-size: $size * 1rem;
+  font-family: $family;
+  font-weight: $weight;
+  line-height: $line;
+}
+
+// mixin gallery
+@mixin gallery($width, $height, $align, $ml: 0, $mb: 0) {
+  width: $width * 1rem;
+  height: $height * 1rem;
+  align-self: $align;
+  margin-left: $ml * 1rem;
+  margin-bottom: $mb * 1rem;
+}
+
+// mixin service-icon
+@mixin service-icon($width, $height) {
+  max: {
+    width: $width * 1rem;
+    height: $height * 1rem;
+  }
+}
+
+// mixin max-width
+@mixin maxWidth($sizes) {
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &--#{$i} {
+      width: $size * 1rem;
+    }
+  }
+}
+
+// mixin catalog-img
+@mixin catalog-img($mt, $max-width) {
+  margin-top: $mt * 1rem;
+  max-width: $max-width * 1rem;
+}
+
+// to direction
+@mixin toToward($opacity, $transform) {
+  opacity: $opacity;
+  transform: translateX($transform * 1rem);
+
+  @if($transform > 8) {
+    transform: translateY($transform * 1rem)
+  }
+}
