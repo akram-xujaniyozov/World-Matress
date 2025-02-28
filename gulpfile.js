@@ -110,3 +110,4 @@ exports.image = img;
 exports.font = font;
 exports.watcher = watcher;
 exports.default = watcher;
+exports.build = build;

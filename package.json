@@ -4,7 +4,8 @@
   "description": "gulp-configuration",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp"
   },
   "author": "Akrom",
   "license": "ISC",
